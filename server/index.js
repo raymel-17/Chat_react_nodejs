@@ -4,14 +4,14 @@ import { Server as Socketserver} from "socket.io";
 import http from "http";
 import cors from "cors";
 
-import {PORT} from './config.js'
+import {SERVER} from './config.js'
 
 
 const app = express();
 const server = http.createServer(app);
 const io = new Socketserver(server, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: 'https://chat-react-client.onrender.com',
     }
 })
 
@@ -32,5 +32,5 @@ io.on('connection', (socket) => {
 
 
 
-server.listen(PORT)
-console.log('server on port', PORT)
+server.listen(SERVER)
+console.log('server on port', SERVER)
