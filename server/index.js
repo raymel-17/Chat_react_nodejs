@@ -13,7 +13,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Socketserver(server, {
     cors: {
-        origin: 'https://chat-react-client.onrender.com:3000',
+        origin: 'https://api.render.com/deploy/srv-cf0v161a6gdm8jqauas0?key=xNuf1CFe8fw',
     }
 })
 
